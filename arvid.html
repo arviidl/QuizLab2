@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+
+<html lang="en">
+
+<head>
+
+<meta charset="UTF-8" />
+<meta name="viewport" content="width-device-width, initial-scale=1.0">
+
+<title> Arvid's Quiz Lab 2 </title>
+<link rel="stylesheet" href="style.css">
+
+</head>
+<body>
+    <h1> Arvid's Halloween Quiz! </h1>
+
+    <form id="quizForm">
+        <!-- Participants Information -->
+         <fieldset>
+            <legend> Participants Information </legend>
+
+            <div class = "form-group">
+                <label for="firstName"> First Name:</label>
+                <input type="text" id="firstName" required pattern="[A-Za-z]+" title=" Enter your first name (letters only)">
+                <span class="required-star">*</span>
+            </div>
+
+            <div class = "form-group">
+                <label for="lastName"> Last Name:</label>
+                <input type="text" id="lastName" required pattern="[A-Za-z]+" title=" Enter your last name (letters only)">
+                <span class="required-star">*</span>
+            </div>
+
+            <div class = "form-group">
+                <label for="email"> Email:</label>
+                <input type="email" id="email" required pattern="[A-Za-z]+" title=" Enter your email">
+                <span class="required-star">*</span>
+            </div>
+            </fieldset>
+
+            <h2> Spooky Questions </h2>
+
+            <!-- Halloween themed questions -->
+
+            <div class = "form-group">
+                <label> 1. Name a traditional Halloween treat/candy: </label>
+                <input type="text" id="q1" name="q1">
+            </div>
+
+            <div class = "form-group">
+                <label> 2. What type of transportation is traditionally used by a witch? <span class="required">*</span> </label>
+                <small class="error" id="q2Error"> This question is required.</small>
+                <div>
+                    <input type="radio" name="q2" value="Bicycle"> Bicycle
+                    <input type="radio" name="q2" value="Car"> Car
+                    <input type="radio" name="q2" value="Broomstick" required> Broomstick
+                </div>
+            </div>
+
+            <div class = "form-group"></div>
+              <label> 3. Which of these are considered Halloween creatures </label>
+              <div>
+                <input type="checkbox" name="q3" value="Vampire"> Vampire
+                <input type="checkbox" name="q3" value="Unicorn"> Unicorn
+                <input type="checkbox" name="q3" value="Ghost"> Ghost
+              </div>
+            </div>
+
+            <div class = "form-group"> 
+                <label for="q4"> 4. What do people say to receive candy on Halloween? <span class="required">*</span></label>
+                <small class="error" id="q4Error"> This question is required.</small>
+                <select id="q4" name="q4" required>
+                    <option value="">-- Select an option --</option>
+                    <option value="Trick or Sweet">Trick or Sweet</option>
+                    <option value="Trick or Treat">Trick or Treat</option>
+                    <option value="Candy or Trick">Trick or Sweet</option>
+                </select>
+            </div>
+
+            <div class = "form-group">
+                <label> 5. In the Halloween movie "Scream", what is the name of the killer's iconic costume? <span class="required">*</span></label>
+                <small class="error" id="q5Error"> This question is required.</small>
+                <div>
+                    <input type="radio" name="q5" value="Clown"> Clown
+                    <input type="radio" name="q5" value="The Slasher"> The Slasher
+                    <input type="radio" name="q5" value="Ghostface" required> Ghostface
+                </div>
+            </div>
+
+            <div class = "form-group">
+                <label> 6. What color are pumpkins typically? </label>
+                <input type="text" id="q6" name="q6">
+            </div>
+
+            <button type="submit"> Submit </button>
+            <p id="successMessage" class="success"> Your spooky answers have been submitted successfully! </p>
+     
+
+    </form>
+
+
+</body>
+</html>
