@@ -13,43 +13,45 @@
 </head>
 <body>
     <div class="quiz-container"> 
-    <h1> 🎃 Arvid's Halloween Quiz! 🎃 </h1>
+    <h1> 🎃Arvid's Halloween Quiz!🎃 </h1>
 
     <form id="quizForm">
         <!-- Participants Information -->
         
             <div class = "form-group">
-                <label for="firstName"> First Name: <span class="required">*</span></label>
-                <input type="text" id="firstName" name="firstName" title=" Enter your first name (letters only)" required>
+                <label for="firstName"> First Name: <span>*</span></label>
+                <input type="text" id="firstName" name="firstName" title=" Enter your first name (letters only)">
             </div>
 
             <div class = "form-group">
-                <label for="lastName"> Last Name: <span class="required">*</span></label>
-                <input type="text" id="lastName" name="lastName" title=" Enter your last name (letters only)" required>
+                <label for="lastName"> Last Name: <span>*</span></label>
+                <input type="text" id="lastName" name="lastName" title=" Enter your last name (letters only)">
             </div>
 
             <div class = "form-group">
-                <label for="email"> Email: <span class="required">*</span></label>
-                <input type="email" id="email" name="email" title=" Enter your email" required>
+                <label for="email"> Email: <span>*</span></label>
+                <input type="email" id="email" name="email" title=" Enter your email">
             </div>
 
             <h2> Spooky Questions </h2>
 
-            <!-- Halloween themed questions -->
+            <!-- Halloween quiz questions -->
 
             <div class = "form-group">
                 <label> 1. Name a traditional Halloween treat/candy: </label>
-                <input type="text" id="q1" name="q1">
+                <input type="text" id="q1" name="q1" title="Please enter an answer">
             </div>
+            <hr>
 
             <div class = "form-group">
-                <label> 2. What type of transportation is traditionally used by a witch? <span class="required">*</span> </label>
+                <label> 2. What type of transportation is traditionally used by a witch? <span>*</span> </label>
                 <div>
                     <input type="radio" name="q2" value="Bicycle"> Bicycle
                     <input type="radio" name="q2" value="Car"> Car
-                    <input type="radio" name="q2" value="Broomstick" required> Broomstick
+                    <input type="radio" name="q2" value="Broomstick"> Broomstick
                 </div>
             </div>
+            <hr>
 
             <div class = "form-group"></div>
               <label> 3. Which of these are considered Halloween creatures </label>
@@ -58,38 +60,44 @@
                 <input type="checkbox" name="q3" value="Unicorn"> Unicorn
                 <input type="checkbox" name="q3" value="Ghost"> Ghost
             </div>
+            <hr>
 
-            <div class = "form-group"> 
-                <label for="q4"> 4. What do people say to receive candy on Halloween? <span class="required">*</span></label>
-                <select id="q4" name="q4" required>
+            <div class = "form-group">
+                <label for="q4"> 4. What do people say to receive candy on Halloween? <span>*</span></label>
+                <select id="q4" name="q4">
                     <option value="">-- Select an option --</option>
                     <option value="Trick or Sweet">Trick or Sweet</option>
                     <option value="Trick or Treat">Trick or Treat</option>
                     <option value="Candy or Trick">Trick or Sweet</option>
                 </select>
             </div>
+            <hr>
 
             <div class = "form-group">
-                <label> 5. In the Halloween movie "Scream", what is the name of the killer's iconic costume? <span class="required">*</span></label>
+                <label> 5. In the Halloween movie "Scream", what is the name of the killer's iconic costume? <span>*</span></label>
                 <div>
                     <input type="radio" name="q5" value="Clown"> Clown
+                    <input type="radio" name="q5" value="Ghostface"> Ghostface
                     <input type="radio" name="q5" value="The Slasher"> The Slasher
-                    <input type="radio" name="q5" value="Ghostface" required> Ghostface
                 </div>
             </div>
+            <hr>
 
             <div class = "form-group">
                 <label> 6. What color are pumpkins typically? </label>
-                <input type="text" id="q6" name="q6">
+                <input type="text" id="q6" name="q6" title="Please enter an answer">
             </div>
+            <hr>
 
-            <button type="submit"> Submit </button>
-            <p id="successMessage" class="success"> Your spooky answers have been submitted successfully! </p>
+             <!-- Submit button -->
+            <button type="button" onclick="validateForm()"> Submit </button>
+            
+            <div id="message"> </div>
      
 
     </form>
 </div>
-
+<script defer src="arvid.js"> </script>
 
 </body>
 </html>
