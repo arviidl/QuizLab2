@@ -45,6 +45,12 @@ function validateForm() {
         messageDiv.innerHTML += '<p style="color: red;"> Question 5 is required. </p>';
         return;
       }
+
+      const q6 = document.getElementById('q6').value.trim();
+      if (!q6) {
+        messageDiv.innerHTML += '<p style="color: red;"> Question 6 is required. </p>';
+        return;
+      }
   
   
       //  Success Message
